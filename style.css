@@ -23,6 +23,9 @@ body{
 .Hero .anim{
     display: inline-block;
 }
+.Hero h2{
+    color: #c9c9c9;
+}
 .Hero h1{
     font-weight: bold;
     background: linear-gradient(to bottom, #e523ff, #002fff);
