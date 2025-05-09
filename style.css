@@ -39,7 +39,7 @@ body{
     width: 100%;
     animation:
         typing 2s,
-        cursor .8s step-end infinite alternate;
+        cursor .5s step-end infinite alternate;
 }
 
 @keyframes typing{
@@ -83,6 +83,7 @@ body{
 
 .my-projects{
     padding-bottom: 25px;
+    overflow-y: hidden;
 }
 .my-projects .btn{
     border-radius: 50%;
@@ -99,6 +100,24 @@ body{
     background-color: rgb(233, 255, 255);
     position: relative;
     cursor: pointer;
+}
+.my-projects .first-col{
+    animation: moveUp 1s ease-in-out;
+}
+.my-projects .second-col{
+    animation: moveUp 1.5s ease-in-out;
+}
+.my-projects .third-col{
+    animation: moveUp 2s ease-in-out;
+}
+@keyframes moveUp {
+    from{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
 .my-projects .card-body{
     padding: 0px 16px !important; 
@@ -143,6 +162,9 @@ body{
 }
 
 @media  (max-width: 992px){
+    .my-projects{
+        overflow: auto;
+    }
     .third-col{
         margin-top: 20px;
     }
